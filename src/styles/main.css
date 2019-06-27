@@ -1,0 +1,85 @@
+@font-face {
+	font-family: 'Roboto Slab';
+	font-weight: normal;
+	src: url(../fonts/RobotoSlab-Regular.ttf);
+	
+}
+@font-face {
+	font-family: 'Roboto Slab';
+	font-weight: 100;
+	src: url(../fonts/RobotoSlab-Thin.ttf);
+}
+body{
+	background: #20292e;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.compas{
+	width: 260px;
+	height: 260px;
+	color: white;
+	font-family: 'Roboto Slab', Georgia, 'Times New Roman', Times, serif;
+	font-size: 24px;
+	background-size: cover;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+.compas .scale {
+	width: 100%;
+	height: 100%;
+	background: url('../images/disc.png') no-repeat;
+	background-size: cover;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+.compas .arrow {
+	width: 125px;
+	height: 125px;
+	background: url('../images/center.png') no-repeat;
+	background-size: cover;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	text-align: center;
+	line-height: 1;
+	padding-top: 40px;
+	box-sizing: border-box;
+}
+
+.compas .direction {
+	text-transform: uppercase;
+	font-weight: normal;
+}
+.compas .degree {
+	font-weight: 100;
+	white-space: nowrap;
+	position: relative;
+	display: inline;
+}
+.compas .value {
+	position: relative;
+}
+.compas .degree-symbol {
+	position: absolute;
+	top: 0;
+	left: 100%;
+}
+/* .arrow .degree::after {
+	content: "°";
+	position: absolute;
+} */
+  

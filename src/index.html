@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="minimum-scale=1, width=device-width, maximum-scale=1, user-scalable=no, minimal-ui"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Compass</title>
-    <link rel="manifest" href="manifest.webmanifest">
 
-    <!--favicon-->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="minimum-scale=1, width=device-width, maximum-scale=1, user-scalable=no, minimal-ui" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Compass</title>
+	<link rel="manifest" href="manifest.webmanifest">
+
+	<!--favicon-->
 	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 
-    <!--for Android-->
+	<!--for Android-->
 	<link rel="icon" type="image/png" href="images/icons/icon48.png" sizes="48x48">
 	<link rel="icon" type="image/png" href="images/icons/icon72.png" sizes="72x72">
 	<link rel="icon" type="image/png" href="images/icons/icon96.png" sizes="96x96">
 	<link rel="icon" type="image/png" href="images/icons/icon144.png" sizes="144x144">
 	<link rel="icon" type="image/png" href="images/icons/icon192.png" sizes="192x192">
 
-    <!--for Apple device-->
+	<!--for Apple device-->
 	<meta name="apple-mobile-web-app-title" content="Compass">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -32,16 +34,29 @@
 	<link rel="apple-touch-icon" sizes="152x152" href="images/icons/icon76x2.png">
 	<link rel="apple-touch-icon" sizes="180x180" href="images/icons/icon60x3.png">
 
-    <!--for IE tile-->
+	<!--for IE tile-->
 	<meta name="application-name" content="Compass" />
 	<meta name="msapplication-TileColor" content="#20292e">
 	<meta name="msapplication-square70x70logo" content="images/icon/icon128.png" />
 	<meta name="msapplication-square150x150logo" content="images/icons/icon270.png" />
 	<meta name="msapplication-wide310x150logo" content="images/wicons/icon270.png" />
 	<meta name="msapplication-square310x310logo" content="images/icons/icon558.png" />
-
+	<link rel="stylesheet" href="./styles/main.css">
+	<script src="jquery-3.4.1.js"></script>
+	<script src="index.js"></script>
 </head>
+
 <body>
-    
+	<div class="compas">
+		<div class="scale" style="transform: rotate(20deg)"></div>
+		<div class="arrow">
+			<div class="direction">ne</div>
+			<div class="degree">
+				<span class="value">32</span>
+				<span class="degree-symbol">°</span>
+			</div>	
+		</div>
+	</div>
 </body>
+
 </html>
