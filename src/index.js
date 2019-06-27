@@ -1,30 +1,18 @@
-import $ from 'jquery';
-
 let scaler = document.querySelector('.scale');
-let degreeValue = document.querySelector('.scale');
-
-// if (window.DeviceOrientationEvent) {
-// 	window.addEventListener('deviceorientation', function (event) {
-// 		// alpha: rotation around z-axis
-// 		let rotateDegrees = event.alpha;
-
-// 		// gamma: left to right
-// 		// let leftToRight = event.gamma;
-
-// 		// beta: front back motion
-// 		// let frontToBack = event.beta;
-
-// 		handleOrientationEvent(rotateDegrees);
-// 	}, true);
-// }
-
-// let handleOrientationEvent = function (rotateDegrees) {
-// 	degreeValue.innerHTML = rotateDegrees;
-// };
+let degreeValue = document.querySelector('.value');
+let direction = document.querySelector('.direction');
 
 function handleOrientation (event) {
 	let degrees = event.alpha;
 
-	degreeValue.innerHTML = degrees;
+	degreeValue.innerHTML = degrees.toFixed(0);
+	scaler.setAttribute('style', `transform: rotate(${degrees.toFixed(0) - 270}deg)`);
+	if (degrees > 45 && degrees < 135) {direction.innerHTML = 's';}
+	if (degrees > 135 && degrees < 225) {direction.innerHTML = 'e';}
+	if (degrees > 225 && degrees < 315) {direction.innerHTML = 'n';}
+	if (degrees > 315 && degrees < 360 || degrees > 0 && degrees < 45) {direction.innerHTML = 'w';}
 }
 window.addEventListener('deviceorientation', handleOrientation);
+
+
+// direction.innerHTML = 'some crap';
